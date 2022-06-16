@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/testForFunbox/static/css/main.21b84449.css",
+    "main.js": "/testForFunbox/static/js/main.faa7a6e0.js",
+    "static/media/background.png": "/testForFunbox/static/media/background.a86b9781eb32f442206d.png",
+    "static/media/card-background.jpg": "/testForFunbox/static/media/card-background.dab88126506bae7b7f3f.jpg",
+    "index.html": "/testForFunbox/index.html",
+    "main.21b84449.css.map": "/testForFunbox/static/css/main.21b84449.css.map",
+    "main.faa7a6e0.js.map": "/testForFunbox/static/js/main.faa7a6e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21b84449.css",
+    "static/js/main.faa7a6e0.js"
+  ]
+}
