@@ -1,0 +1,207 @@
+@import '../variables.module.scss';
+
+.Card {
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  &:hover {
+    .link {
+      a {
+        color: $default-hover-color;
+        &::after {
+          border-bottom: 2px dashed $default-hover-color;
+        }
+      }
+    }
+  }
+  &:last-of-type {
+    @media (max-width: 1135px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      width: 320px;
+    }
+    @media (max-width: 740px) {
+      grid-column-start: auto;
+      grid-column-end: auto;
+    }
+  }
+}
+
+.link {
+  margin-top: 14px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  a {
+    position: relative;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    line-height: 15px;
+    text-align: center;
+    color: $default-color;
+    transition: 0.2s color ease-in-out;
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 80%;
+      height: 1px;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: transparent;
+      transition: 0.2s border ease-in-out;
+      border-bottom: 2px dashed $default-color;
+    }
+  }
+}
+
+.notAvailable {
+  color: #ffff66;
+}
+
+.CardContent {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: url('./card-background.jpg') center/cover no-repeat;
+  padding: 21px 48px 61px;
+  border-radius: 12px;
+  border: 4px solid $default-color;
+  transition: 0.2s border ease-in-out;
+  &:hover {
+    border: 4px solid $default-hover-color;
+    &::after {
+      background: $default-hover-color;
+    }
+    & .weight {
+      background: $default-hover-color;
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    display: block;
+    border-top: 50px solid #010101;
+    border-right: 50px solid transparent;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -12px;
+    width: 66px;
+    transform: rotate(135deg);
+    height: 4px;
+    background: $default-color;
+  }
+  span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #666666;
+  }
+  h2 {
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    b {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 48px;
+      color: #000000;
+    }
+  }
+  p {
+    margin-top: 15px;
+    width: 150px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
+    b {
+      font-weight: 700;
+    }
+  }
+}
+
+.weight {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 22px;
+  width: 80px;
+  height: 80px;
+  padding-top: 20px;
+  text-align: center;
+  border-radius: 100%;
+  transition: 0.2s background ease-in-out;
+  background: $default-color;
+  b {
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 22px;
+  }
+}
+
+.selected {
+  cursor: pointer;
+  & .CardContent {
+    border-color: $selected-color;
+    &:hover {
+      border: 4px solid $selected-hover-color;
+      &::after {
+        background: $selected-hover-color;
+      }
+      & .weight {
+        background: $selected-hover-color;
+      }
+    }
+    &::after {
+      background: $selected-color;
+    }
+    & .weight {
+      background: $selected-color;
+    }
+  }
+}
+
+.disabled {
+  & .CardContent {
+    border-color: $disabled-color;
+    &::after {
+      background: $disabled-color;
+    }
+    & .weight {
+      background: $disabled-color;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  left: 0;
+  top: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    display: block;
+    border-top: 50px solid #010101;
+    border-right: 50px solid transparent;
+  }
+}

@@ -1,0 +1,13 @@
+$default-color: #1698d9;
+$default-hover-color: #2ea8e6;
+$selected-color: #d91667;
+$selected-hover-color: #e52e7a;
+$disabled-color: #b3b3b3;
+
+:export {
+  default-color: $default-color;
+  default-hover-color: $default-hover-color;
+  selected-color: $selected-color;
+  selected-hover-color: $selected-hover-color;
+  disabled-color: $disabled-color;
+}

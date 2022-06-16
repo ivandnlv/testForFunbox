@@ -1,0 +1,17 @@
+body {
+  position: relative;
+  font-family: 'Trebuchet MS';
+  max-height: 100vh;
+  overflow: auto;
+  background: url('../public/img/background.png') center;
+  @media (max-width: 1135px) {
+    min-height: 100vh;
+    max-height: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
